@@ -1,6 +1,6 @@
 .data-board {
-  flex-wrap: wrap;
   display: flex;
+  flex-wrap: wrap;
   gap: var(--spLg);
 
   &-sub {
@@ -77,6 +77,7 @@
         background: var(--gradientBg);
         background-clip: text;
       }
+      
       &:hover {
         background-color: var(--colBorder);
       }
