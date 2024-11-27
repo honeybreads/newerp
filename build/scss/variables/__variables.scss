@@ -7,19 +7,22 @@
   --colSecondaryDarken: #{darken(#8e44ad, 10)};
   --colBorder: #efefef;
   --colOutBorder: #cdcdcd;
+  --colRead: #fafafa;
   --gradientBg: linear-gradient(45deg, #8e44ad, #3498db);
   --txtTitle: 21px;
+  --txtLg: 16px;
   --spXl: 20px;
   --spLg: 12px;
   --spMd: 8px;
   --spSm: 4px;
-  --conSize: 32px;
+  --conSize: 36px;
 }
 
 @media (max-width: 1024px) {
   :root {
     --txtTitle: 18px;
-    --conSize: 28px;
+    --txtLg: 14px;
+    --conSize: 32px;
     --spXl: 16px;
     --spLg: 10px;
     --spMd: 6px;

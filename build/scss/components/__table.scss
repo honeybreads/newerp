@@ -56,6 +56,7 @@
     }
     td {
       border-bottom: 1px solid var(--colBorder);
+      .btn{height: 24px;}
       & * {
         white-space: nowrap;
       }
@@ -71,6 +72,9 @@
   margin-top: var(--spLg);
   justify-content: space-between;
 
+  &:not(:has(.btn)){
+    justify-content: center;
+  }
   .btn {
     margin-left: auto;
   }
