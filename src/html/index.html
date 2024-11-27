@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ERP 새로운 페이지</title>
+    <style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		html {
+			overflow-y: scroll;
+		}
+
+		body {
+			color: #666;
+			background-color: #fff;
+			font: 14px/1.5 'Malgun Gothic', Dotum, '돋움', Verdana, sans-serif;
+		}
+
+		a {
+			color: #27e;
+			text-decoration: none;
+		}
+
+		a:focus,
+		a:hover,
+		a:active {
+			text-decoration: underline;
+		}
+
+		em {
+			font-style: normal;
+		}
+
+		.header {
+			padding: .5em;
+			margin-top: 30px;
+		}
+
+		.header h1 {
+			margin-right: 1em;
+			color: #000;
+			font-size: 24px;
+			text-align: center;
+			font-weight: 700;
+		}
+
+		.header ul {
+			display: inline;
+			font-size: 1.5em;
+			list-style: none;
+		}
+
+		.header ul li {
+			display: inline;
+		}
+
+		.group-title {
+			margin-top: 1em;
+			color: #000;
+			font-weight: bold;
+			font-size: 1.5em;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		table caption {
+			display: none;
+		}
+
+		table th {
+			color: #333;
+			background-color: #eee;
+		}
+
+		table th,
+		table td {
+			padding: .5em;
+			border: 1px solid #ddd;
+			text-align: left;
+			word-break: keep-all;
+		}
+
+		table tr td:first-child {
+			padding-left: 1em;
+		}
+
+		table th,
+		table td.stat,
+		table td.date {
+			text-align: center;
+		}
+
+		table tr.even,
+		table tr td.multi {
+			background-color: #fafafa;
+		}
+
+		table tr.add td {
+			background-color: #fd0;
+		}
+
+		table tr.modify td {
+			background-color: #fffeb4;
+		}
+
+		table tr.hover td {
+			background-color: #f9ffd9;
+		}
+
+		table tr.none td {
+			color: #000;
+			background-color: #fc8989;
+		}
+
+		table tr.up td {
+			background-color: #ffe9f5;
+		}
+
+		.update {
+			color: #ff0000 !important;
+		}
+
+		table tr td em {
+			display: inline-block;
+			margin: 0 3px;
+			font-size: 12px;
+			color: red;
+			font-style: normal;
+		}
+
+		table tr td strong {
+			display: inline-block;
+			margin: 0 3px;
+			font-size: 12px;
+			color: green;
+			font-style: normal;
+		}
+
+		.section {
+			margin: 0 0 15px;
+		}
+
+		.section .title {
+			margin: 0;
+			padding: 0;
+			color: #000;
+			font-weight: 800;
+			font-size: 14px;
+		}
+
+		body.js .section .title {
+			padding: .5em .5em .5em 1em;
+			border: 1px solid #ccc;
+			background-color: #ddd;
+			cursor: pointer;
+		}
+
+		body.js .section+.section .title {
+			border-top: 0;
+		}
+
+		body.js .section .title .page-count {
+			color: #666;
+			font-weight: normal;
+		}
+
+		body.js .section .content {
+			display: none;
+		}
+
+		.attention {
+			margin-bottom: 20px;
+			padding: 20px;
+			color: #000;
+			font-weight: bold;
+			background: rgba(135, 135, 135, 0.3);
+		}
+
+		#sb-body {
+			border: none !important;
+		}
+
+		.state-ico {
+			padding: 0 10px 0 0;
+			line-height: 14px;
+			text-align: right;
+		}
+	</style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		(function($) {
+			$.fn.stat = function(options) {
+				var settings = $.extend({
+						title: 'h2.title',
+						content: 'div.content',
+						files: 'tbody tr',
+						date: 'td.date',
+						index: 0,
+						openAll: false,
+						speed: 'fast'
+					}, options),
+					all_sections = this,
+					header = $('div.header');
+				return this.each(function() {
+					var self = this,
+						$self = $(self),
+						title_text = [],
+						completed = 0;
+					self.section_title = $(settings.title, $self);
+					self.content = $(settings.content, $self);
+					self.files = $(settings.files, $self);
+					self.files.each(function() {
+						var date = $(settings.date, this);
+						date.each(function() {
+							var text = $(this).text();
+							if (text) {
+								completed++;
+							}
+						});
+					});
+					self.files
+						.bind('mouseenter', function() {
+							$(this).addClass('hover');
+						})
+						.bind('mouseleave', function() {
+							$(this).removeClass('hover');
+						});
+					title_text = [self.section_title.text(), ' <span class="page-count">(', completed, '/', self.files.length, ')</span>'];
+					self.section_title.html(title_text.join(''));
+					self.section_title.bind('click', function() {
+						self.content.slideToggle(settings.speed);
+					});
+					if (settings.openAll || ((settings.index - 1) === all_sections.index(this))) {
+						self.content.css('display', 'block');
+					}
+				});
+			};
+			$(document).ready(function() {
+				$('div.section').stat({
+					openAll: true
+				});
+				$('#total').text($('tbody tr').length);
+				$('tbody tr:even').addClass('even');
+				$('tbody td[rowspan][rowspan!=1]').addClass('multi');
+
+				//link set
+				var link = $('.content .link');
+				link.each(function(idx) {
+					var _this = $(this);
+					var _path = _this.parents('.content').find('.path').eq(0).text();
+					var tag = '<a href="' + _path + _this.text() + '" target="_blank">' + _this.text() + '</a>';
+					_this.html(tag);
+				});
+
+			});
+		}(jQuery));
+
+		function openPop(_url, _name, _width, _height) {
+			window.open(_url, _name, 'width=' + _width + 'px, height=' + _height + 'px, top=0, left=0, resizable=yes, scrollbars=yes, location=no,  toolbar=no, status=no, menubar=no');
+			return false;
+		}
+	</script>
+</head>
+
+<body class="js">
+	<div class="header">
+		<h1>ERP File List</h1>
+	</div>
+	<p class="state-ico">
+		○ 작업중 &nbsp;
+		● 완료
+	</p>
+	<!-- 프로젝트 -->
+	<div class="section">
+		<h2 class="title">프로젝트</h2>
+		<div class="content">
+			<table>
+				<colgroup>
+					<col style="width: 10%;"/>
+					<col style="width: 10%;" />
+					<col style="width: 10%;" />
+					<col style="width: 10%;" />
+					<col style="width: 15%;" />
+					<col style="width: 3%;" />
+					<col style="width: 8%;" />
+					<col style="width:auto" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 depth</th>
+						<th scope="col">Process</th>
+						<th scope="col">path</th>
+						<th scope="col">file</th>
+						<th scope="col">state</th>
+						<th scope="col">date</th>
+						<th scope="col">note</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>프로젝트 리스트</td>
+						<td></td>
+						<td></td>
+						<td class="path">./project/</td>
+						<td class="link">project_list.html</td>
+						<td class="stat">●</td>
+						<td class="date"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>프로젝트 등록</td>
+						<td></td>
+						<td></td>
+						<td class="path"></td>
+						<td class="link">project_add.html</td>
+						<td class="stat">●</td>
+						<td class="date"></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td>프로젝트 수정</td>
+						<td></td>
+						<td></td>
+						<td class="path"></td>
+						<td class="link">project_modify.html</td>
+						<td class="stat">●</td>
+						<td class="date"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>프로젝트 공수 목록</td>
+						<td></td>
+						<td></td>
+						<td class="path"></td>
+						<td class="link">project2_list.html</td>
+						<td class="stat">●</td>
+						<td class="date"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>프로젝트 공수 등록</td>
+						<td></td>
+						<td></td>
+						<td class="path"></td>
+						<td class="link">project2_add.html</td>
+						<td class="stat">●</td>
+						<td class="date"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>프로젝트 공수 수정</td>
+						<td></td>
+						<td></td>
+						<td class="path"></td>
+						<td class="link">project2_modify.html</td>
+						<td class="stat">●</td>
+						<td class="date"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>프로젝트별 공수 목록</td>
+						<td></td>
+						<td></td>
+						<td class="path"></td>
+						<td class="link">project3_list.html</td>
+						<td class="stat">●</td>
+						<td class="date"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>프로젝트 상세</td>
+						<td></td>
+						<td></td>
+						<td class="path"></td>
+						<td class="link">project_view.html</td>
+						<td class="stat">●</td>
+						<td class="date"></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- //프로젝트 -->
+</body>
+</html>
+

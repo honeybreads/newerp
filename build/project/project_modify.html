@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/common.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="../css/common.css">
+    
+  <link rel="stylesheet" href="../../css/add.css" />
+  <title>프로젝트 수정</title>
+
+</head>
+
+<!-- body -->
+<body class="body">
+    <main class="main">
+        
+  <h2 class="main-title">
+    <i class="fa-solid fa-pen-to-square"></i>
+    프로젝트 수정
+  </h2>
+  <article class="data-add">
+    <h3 class="hidden">프로젝트 영역</h3>
+    <form>
+      <div class="data-board">
+        <div class="data-board-input full">
+          <p>프로젝트명</p>
+          <input type="text" value="프로젝트명" />
+        </div>
+        <div class="data-board-input">
+          <p>작성자</p>
+          <input type="text" value="김세훈" />
+        </div>
+        <div class="data-board-input">
+          <p>구분</p>
+          <select>
+            <option value="none">--선택해주세요--</option>
+            <option value="B2B" selected>B2B</option>
+            <option value="커머스">커머스</option>
+            <option value="유지보수">유지보수</option>
+            <option value="기간망">기간망</option>
+            <option value="기능검증">기능검증</option>
+            <option value="사내시험">사내시험</option>
+            <option value="드림라인">드림라인</option>
+          </select>
+        </div>
+        <div class="data-board-input">
+          <p>프로젝트코드</p>
+          <input type="text" value="aaaaaaaa" />
+        </div>
+        <div class="data-board-input">
+          <p>계약일</p>
+          <input type="date" value="2025-02-01" />
+        </div>
+        <div class="data-board-input">
+          <p>착공일</p>
+          <input type="date" value="2025-02-01" />
+        </div>
+        <div class="data-board-input">
+          <p>준공일</p>
+          <input type="date" value="2025-02-01" />
+        </div>
+        <div class="data-board-input full">
+          <p>비고</p>
+          <textarea>무언가 적혀있다.</textarea>
+        </div>
+        <div class="data-board-input full">
+          <p>진행여부</p>
+          <select>
+            <option value="none">추진 중</option>
+            <option value="none">진행 중</option>
+            <option value="none">종료</option>
+          </select>
+        </div>
+        <div class="data-board-input full">
+          <p>파일</p>
+          <div class="input-group">
+            <input type="text" value="첨부파일" disabled />
+            <input type="file" id="file" />
+            <label class="btn" for="file">파일찾기</label>
+          </div>
+        </div>
+        <div class="data-board-input full">
+          <p>등록 파일</p>
+          <div class="input-group data-board-file__list">
+            <div class="data-board-file">
+              <a href="file1" download>
+                <i class="fa-solid fa-file"></i>
+                파일1
+              </a>
+              <button>
+                <span>
+                  <i class="fa-solid fa-xmark"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- foot -->
+      <div class="data-board-foot">
+        <a href="./project_list.html" class="btn outline">리스트</a>
+        <button class="btn primary">수정</button>
+      </div>
+    </form>
+  </article>
+  <script>
+    const fileInput = document.querySelectorAll("input[type='file']");
+    fileInput.forEach((input) => {
+      input.addEventListener("change", () => {
+        input.previousElementSibling.value = input.value;
+      });
+    });
+  </script>
+
+    </main>
+</body>

@@ -1,0 +1,74 @@
+.body input,
+.body select,
+.body textarea {
+  border-radius: 4px;
+  outline-offset: 1px;
+  vertical-align: middle;
+  height: var(--conSize);
+  padding: var(--spSm) var(--spMd);
+  border: 1px solid var(--colBorder);
+
+  &:focus {
+    border-radius: 0 !important;
+    outline-color: var(--colDark);
+  }
+}
+
+.body textarea {
+  width: 100%;
+  height: auto;
+  resize: none;
+  min-height: 160px;
+}
+
+.body .input-group {
+  display: flex;
+  input {
+    border-radius: 4px 0 0 4px !important;
+  }
+
+  .btn {
+    flex: none;
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+.body select {
+  min-width: 100px;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../images/angle-down-solid.svg) right 10px top 50% no-repeat;
+  background-size: 12px;
+
+  &.time,
+  &.minute{
+    min-width: auto;
+    flex: none !important;
+    width: 72px !important;
+  }
+}
+
+.body input[type="date"] {
+  position: relative;
+  background: url(../images/calendar-solid.svg) right 10px top 50% no-repeat;
+  background-size: 12px;
+
+  &::-webkit-calendar-picker-indicator {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    color: transparent;
+    position: absolute;
+    background: transparent;
+  }
+}
+
+.body input[type="file"] {
+  display: none;
+}

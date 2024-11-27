@@ -1,0 +1,32 @@
+:root {
+  --colMain: #3993d8;
+  --colMainDarken: #{darken(#3993d8, 10)};
+  --colDark: #333;
+  --colDarkDarken: #{darken(#333, 10)};
+  --colSecondary: #8e44ad;
+  --colSecondaryDarken: #{darken(#8e44ad, 10)};
+  --colBorder: #efefef;
+  --colOutBorder: #cdcdcd;
+  --gradientBg: linear-gradient(45deg, #8e44ad, #3498db);
+  --txtTitle: 21px;
+  --spXl: 20px;
+  --spLg: 12px;
+  --spMd: 8px;
+  --spSm: 4px;
+  --conSize: 32px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --txtTitle: 18px;
+    --conSize: 28px;
+    --spXl: 16px;
+    --spLg: 10px;
+    --spMd: 6px;
+    --spSm: 3px;
+  }
+
+  body {
+    font-size: 12px;
+  }
+}

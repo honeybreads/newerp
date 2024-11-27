@@ -1,0 +1,42 @@
+.btn {
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 4px 12px;
+  border-radius: 4px;
+  align-content: center;
+  height: var(--conSize);
+  background: var(--colDark);
+  display: inline-block;
+
+  &:hover {
+    background: var(--colDarkDarken);
+  }
+
+  &.primary {
+    background: var(--colMain);
+    &:hover {
+      background: var(--colMainDarken);
+    }
+  }
+
+  &.outline {
+    color: var(--colDark);
+    background-color: transparent;
+    border: 1px solid var(--colBorder);
+
+    &:hover {
+      background-color: var(--colBorder);
+    }
+  }
+
+  &.icon {
+    padding: 6px;
+    color: var(--colDark);
+    background-color: transparent;
+    &:hover {
+      color: var(--colMain);
+    }
+  }
+}

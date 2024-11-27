@@ -1,0 +1,188 @@
+<include src="../include/__head.html">
+  <link rel="stylesheet" href="../../css/add.css" />
+  <title>프로젝트 공수 수정</title>
+</include>
+<!-- body -->
+<include src="../include/__layout.html">
+  <h2 class="main-title">
+    <i class="fa-solid fa-pen-to-square"></i>
+    프로젝트 공수 수정
+  </h2>
+  <article class="data-add">
+    <h3 class="hidden">프로젝트 영역</h3>
+    <form>
+      <div class="data-board">
+        <div class="data-board-input full">
+          <p>프로젝트명</p>
+          <div class="input-group">
+            <input
+              type="text"
+              value="프로젝트명"
+              readonly
+            />
+            <button class="btn modal-trigger" data-modal="modal-1">
+              프로젝트 찾기
+            </button>
+          </div>
+        </div>
+        <div class="data-board-input">
+          <p>작성자</p>
+          <input type="text" value="김세훈" />
+        </div>
+        <div class="data-board-input">
+          <p>날짜</p>
+          <input type="date" value="2025-02-01" />
+        </div>
+        <div class="data-board-input">
+          <p>근무시간</p>
+          <div class="input-group">
+            <div class="input-group">
+              <select class="time"></select>
+              <p>시간</p>
+            </div>
+            <div class="input-group">
+              <select class="minute"></select>
+              <p>분</p>
+            </div>
+          </div>
+        </div>
+        <div class="data-board-input">
+          <p>야간근무시간</p>
+          <div class="input-group">
+            <div class="input-group">
+              <select class="time"></select>
+              <p>시간</p>
+            </div>
+            <div class="input-group">
+              <select class="minute"></select>
+              <p>분</p>
+            </div>
+          </div>
+        </div>
+        <div class="data-board-input full">
+          <p>비고</p>
+          <textarea>비고를 작성</textarea>
+        </div>
+      </div>
+      <!-- modal -->
+      <div class="modal" data-modal="modal-1">
+        <div class="modal-con">
+          <div class="modal-head">
+            <p class="modal-head-title">프로젝트 찾기</p>
+            <button class="modal-head-close modal-trigger" data-modal="modal-1">
+              <span class="blind">모달닫기</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="table-area">
+              <div class="search-bar">
+                <select>
+                  <option>구분</option>
+                  <option>프로젝트명</option>
+                </select>
+                <div class="input-group">
+                  <input type="text" placeholder="검색어" />
+                  <button class="btn">찾기</button>
+                </div>
+              </div>
+              <div class="table-scroll">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th><p>번호</p></th>
+                      <th><p>구분</p></th>
+                      <th><p>프로젝트명</p></th>
+                      <th><p>프로젝트코드</p></th>
+                      <th><p>작성자</p></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @@for(var i = 0; i<5; i++){
+                    <tr>
+                      <td class="tb-num"><p>`+(i+1)+`</p></td>
+                      <td><p>B2B</p></td>
+                      <td class="tb-hidden"><a href="#none">프로젝트명</a></td>
+                      <td class="tb-hidden"><p>AAAAA</p></td>
+                      <td><p>김세훈</p></td>
+                    </tr>
+                    }
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-foot">
+                <ul class="pagination">
+                  <li class="pagination-list disabled">
+                    <button class="pagination-btn">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                  </li>
+                  <li class="pagination-list active">
+                    <button class="pagination-btn">1</button>
+                  </li>
+                  <li class="pagination-list">
+                    <button class="pagination-btn">2</button>
+                  </li>
+                  <li class="pagination-list">
+                    <button class="pagination-btn">3</button>
+                  </li>
+                  <li class="pagination-list">
+                    <button class="pagination-btn">4</button>
+                  </li>
+                  <li class="pagination-list">
+                    <button class="pagination-btn">5</button>
+                  </li>
+                  <li class="pagination-list">
+                    <button class="pagination-btn">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- foot -->
+      <div class="data-board-foot">
+        <a href="./project2_list.html" class="btn outline">리스트</a>
+        <button class="btn primary">수정</button>
+      </div>
+    </form>
+  </article>
+  <script>
+    // 시간, 분 만들기
+    const selectMinute = document.querySelectorAll("select.minute");
+    const selectTIme = document.querySelectorAll("select.time");
+
+    const createOption = (number) => {
+      const option = document.createElement("option");
+      option.setAttribute.value = number;
+      option.innerText = number;
+      if(number === 10) option.setAttribute("selected",true)
+      return option;
+    };
+
+    selectTIme.forEach((time) => {
+      [...Array(25)].forEach((_, index) => {
+        time.append(createOption(index));
+      });
+    });
+
+    selectMinute.forEach((time) => {
+      [...Array(60)].forEach((_, index) => {
+        time.append(createOption(index));
+      });
+    });
+
+    // modal
+    const modalTrigger = document.querySelectorAll(".modal-trigger");
+    modalTrigger.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const modalName = btn.getAttribute("data-modal");
+        const modal = document.querySelector(`.modal[data-modal=${modalName}]`);
+        modal.classList.toggle("active");
+      });
+    });
+  </script>
+</include>

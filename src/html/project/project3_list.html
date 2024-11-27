@@ -1,0 +1,91 @@
+<include src="../include/__head.html">
+  <title>프로젝트별 공수 리스트</title>
+</include>
+<!-- body -->
+<include src="../include/__layout.html">
+  <h2 class="main-title">
+    <i class="fa-solid fa-list"></i>
+    프로젝트별 공수 리스트
+  </h2>
+  <article class="table-area">
+    <h3 class="hidden">테이블 영역</h3>
+    <div class="search-bar">
+      <select>
+        <option>구분</option>
+        <option>프로젝트명</option>
+      </select>
+      <div class="input-group">
+        <input type="text" placeholder="검색어" />
+        <button class="btn">찾기</button>
+      </div>
+    </div>
+    <div class="table-scroll">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><p>번호</p></th>
+            <th><p>구분</p></th>
+            <th><p>프로젝트명</p></th>
+            <th><p>프로젝트코드</p></th>
+            <th><p>작성자</p></th>
+            <th><p>근무시간</p></th>
+            <th><p>야간근무</p></th>
+            <th><p>총시간</p></th>
+            <th><p>수정</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          @@for(var i = 0; i<10; i++){
+          <tr>
+            <td class="tb-num"><p>`+(i+1)+`</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-hidden">
+              <a href="./project_view.html">프로젝트명</a>
+            </td>
+            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>김세훈</p></td>
+            <td class="tb-num"><p>18</p></td>
+            <td class="tb-num"><p>5</p></td>
+            <td class="tb-num"><p>23</p></td>
+            <td class="tb-num">
+              <a class="btn icon" href="./project2_modify.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    <div class="table-foot">
+      <ul class="pagination">
+        <li class="pagination-list disabled">
+          <button class="pagination-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </li>
+        <li class="pagination-list active">
+          <button class="pagination-btn">1</button>
+        </li>
+        <li class="pagination-list">
+          <button class="pagination-btn">2</button>
+        </li>
+        <li class="pagination-list">
+          <button class="pagination-btn">3</button>
+        </li>
+        <li class="pagination-list">
+          <button class="pagination-btn">4</button>
+        </li>
+        <li class="pagination-list">
+          <button class="pagination-btn">5</button>
+        </li>
+        <li class="pagination-list">
+          <button class="pagination-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </li>
+      </ul>
+      <button class="btn">등록</button>
+    </div>
+  </article>
+</include>

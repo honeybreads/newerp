@@ -1,0 +1,18 @@
+.btn {
+  height: var(--conSize);
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.btn {
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 4px 12px;
+  background: var(--colDark);
+
+  &:hover {
+    background: var(--colDarkDarken);
+  }
+}

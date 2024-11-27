@@ -1,0 +1,160 @@
+<include src="../include/__head.html">
+  <link rel="stylesheet" href="../../css/add.css" />
+  <title>프로젝트 상세</title>
+</include>
+<!-- body -->
+<include src="../include/__layout.html">
+  <h2 class="main-title">
+    <i class="fa-solid fa-pen-to-square"></i>
+    프로젝트 상세
+  </h2>
+  <article class="data-add">
+    <h3 class="hidden">프로젝트 영역</h3>
+    <form>
+      <div class="data-board read">
+        <div class="data-board-input full">
+          <p>프로젝트명</p>
+          <input type="text" value="프로젝트명" />
+        </div>
+        <div class="data-board-input">
+          <p>작성자</p>
+          <input type="text" value="김세훈" />
+        </div>
+        <div class="data-board-input">
+          <p>구분</p>
+          <select>
+            <option value="none">--선택해주세요--</option>
+            <option value="B2B" selected>B2B</option>
+            <option value="커머스">커머스</option>
+            <option value="유지보수">유지보수</option>
+            <option value="기간망">기간망</option>
+            <option value="기능검증">기능검증</option>
+            <option value="사내시험">사내시험</option>
+            <option value="드림라인">드림라인</option>
+          </select>
+        </div>
+        <div class="data-board-input">
+          <p>프로젝트코드</p>
+          <input type="text" value="aaaaaaaa" />
+        </div>
+        <div class="data-board-input">
+          <p>계약일</p>
+          <input type="date" value="2025-02-01" />
+        </div>
+        <div class="data-board-input">
+          <p>착공일</p>
+          <input type="date" value="2025-02-01" />
+        </div>
+        <div class="data-board-input">
+          <p>준공일</p>
+          <input type="date" value="2025-02-01" />
+        </div>
+        <div class="data-board-input full">
+          <p>비고</p>
+          <textarea>무언가 적혀있다.</textarea>
+        </div>
+        <div class="data-board-input full">
+          <p>진행여부</p>
+          <select>
+            <option value="none">추진 중</option>
+            <option value="none">진행 중</option>
+            <option value="none">종료</option>
+          </select>
+        </div>
+        <div class="data-board-input full">
+          <p>등록 파일</p>
+          <div class="input-group data-board-file__list">
+            <div class="data-board-file">
+              <a href="file1" download>
+                <i class="fa-solid fa-file"></i>
+                파일1
+              </a>
+            </div>
+            <div class="data-board-file">
+              <a href="file2" download>
+                <i class="fa-solid fa-file"></i>
+                파일2
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 공수 목록 -->
+      <div class="table-area">
+        <p class="data-board-sub">현재 프로젝트 공수</p>
+        <div class="table-scroll">
+          <table class="table">
+            <thead>
+              <tr>
+                <th><p>번호</p></th>
+                <th><p>구분</p></th>
+                <th><p>프로젝트명</p></th>
+                <th><p>프로젝트코드</p></th>
+                <th><p>작성자</p></th>
+                <th><p>근무시간</p></th>
+                <th><p>야간근무</p></th>
+                <th><p>총시간</p></th>
+                <th><p>수정</p></th>
+              </tr>
+            </thead>
+            <tbody>
+              @@for(var i = 0; i<5; i++){
+              <tr>
+                <td class="tb-num"><p>`+(i+1)+`</p></td>
+                <td><p>B2B</p></td>
+                <td class="tb-hidden">
+                  <a href="./project_view.html">프로젝트명</a>
+                </td>
+                <td class="tb-hidden"><p>AAAAA</p></td>
+                <td><p>김세훈</p></td>
+                <td class="tb-num"><p>18</p></td>
+                <td class="tb-num"><p>5</p></td>
+                <td class="tb-num"><p>23</p></td>
+                <td class="tb-num">
+                  <a class="btn icon" href="./project2_modify.html">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        <div class="table-foot">
+          <ul class="pagination">
+            <li class="pagination-list disabled">
+              <button class="pagination-btn">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+            </li>
+            <li class="pagination-list active">
+              <button class="pagination-btn">1</button>
+            </li>
+            <li class="pagination-list">
+              <button class="pagination-btn">2</button>
+            </li>
+            <li class="pagination-list">
+              <button class="pagination-btn">3</button>
+            </li>
+            <li class="pagination-list">
+              <button class="pagination-btn">4</button>
+            </li>
+            <li class="pagination-list">
+              <button class="pagination-btn">5</button>
+            </li>
+            <li class="pagination-list">
+              <button class="pagination-btn">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- foot -->
+      <div class="data-board-foot">
+        <button class="btn outline">리스트</button>
+        <button class="btn primary">수정</button>
+      </div>
+    </form>
+  </article>
+</include>

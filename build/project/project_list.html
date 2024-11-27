@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/common.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="../css/common.css">
+    
+  <title>프로젝트 리스트</title>
+
+</head>
+
+<!-- body -->
+<body class="body">
+    <main class="main">
+        
+  <h2 class="main-title">
+    <i class="fa-solid fa-list"></i>
+    프로젝트 리스트
+  </h2>
+  <article class="table-area">
+    <h3 class="hidden">테이블 영역</h3>
+    <div class="search-bar">
+      <select>
+        <option>구분</option>
+        <option>프로젝트명</option>
+      </select>
+      <div class="input-group">
+        <input type="text" placeholder="검색어" />
+        <button class="btn">찾기</button>
+      </div>
+    </div>
+    <div class="table-scroll">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><p>번호</p></th>
+            <th><p>구분</p></th>
+            <th><p>프로젝트명</p></th>
+            <th><p>프로젝트코드</p></th>
+            <th><p>작성자</p></th>
+            <th><p>계약일</p></th>
+            <th><p>등록일</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 데이터가 없는 경우  -->
+          <!-- <tr>
+            <td colspan="7">등록된 데이터가 없습니다.</td>
+          </tr> -->
+          
+          <tr>
+            <td class="tb-num"><p>1</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-hidden"><a href="./project_view.html">프로젝트명</a></td>
+            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2025-02-01</p></td>
+            <td><p>2025-02-01</p></td>
+          </tr>
+          
+          <tr>
+            <td class="tb-num"><p>2</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-hidden"><a href="./project_view.html">프로젝트명</a></td>
+            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2025-02-01</p></td>
+            <td><p>2025-02-01</p></td>
+          </tr>
+          
+          <tr>
+            <td class="tb-num"><p>3</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-hidden"><a href="./project_view.html">프로젝트명</a></td>
+            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2025-02-01</p></td>
+            <td><p>2025-02-01</p></td>
+          </tr>
+          
+          <tr>
+            <td class="tb-num"><p>4</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-hidden"><a href="./project_view.html">프로젝트명</a></td>
+            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2025-02-01</p></td>
+            <td><p>2025-02-01</p></td>
+          </tr>
+          
+          <tr>
+            <td class="tb-num"><p>5</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-hidden"><a href="./project_view.html">프로젝트명</a></td>
+            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2025-02-01</p></td>
+            <td><p>2025-02-01</p></td>
+          </tr>
+          
+          <tr>
+            <td class="tb-num"><p>6</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-hidden"><a href="./project_view.html">프로젝트명</a></td>
+            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2025-02-01</p></td>
+            <td><p>2025-02-01</p></td>
+          </tr>
+          
+          <tr>
+            <td class="tb-num"><p>7</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-hidden"><a href="./project_view.html">프로젝트명</a></td>
+            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2025-02-01</p></td>
+            <td><p>2025-02-01</p></td>
+          </tr>
+          
+          <tr>
+            <td class="tb-num"><p>8</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-hidden"><a href="./project_view.html">프로젝트명</a></td>
+            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2025-02-01</p></td>
+            <td><p>2025-02-01</p></td>
+          </tr>
+          
+          <tr>
+            <td class="tb-num"><p>9</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-hidden"><a href="./project_view.html">프로젝트명</a></td>
+            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2025-02-01</p></td>
+            <td><p>2025-02-01</p></td>
+          </tr>
+          
+          <tr>
+            <td class="tb-num"><p>10</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-hidden"><a href="./project_view.html">프로젝트명</a></td>
+            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2025-02-01</p></td>
+            <td><p>2025-02-01</p></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="table-foot">
+      <ul class="pagination">
+        <li class="pagination-list disabled">
+          <button class="pagination-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </li>
+        <li class="pagination-list active">
+          <button class="pagination-btn">1</button>
+        </li>
+        <li class="pagination-list">
+          <button class="pagination-btn">2</button>
+        </li>
+        <li class="pagination-list">
+          <button class="pagination-btn">3</button>
+        </li>
+        <li class="pagination-list">
+          <button class="pagination-btn">4</button>
+        </li>
+        <li class="pagination-list">
+          <button class="pagination-btn">5</button>
+        </li>
+        <li class="pagination-list">
+          <button class="pagination-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </li>
+      </ul>
+      <a href="./project_add.html" class="btn">등록</a>
+    </div>
+  </article>
+
+    </main>
+</body>

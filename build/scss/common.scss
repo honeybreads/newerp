@@ -1,0 +1,56 @@
+/* variables */
+@import "./variables/_reset";
+@import "./variables/_variables";
+@import "./variables/_common";
+
+/* components */
+@import "./components/_input";
+@import "./components/_button";
+@import "./components/_table";
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.body {
+  padding: var(--spMd);
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1280px;
+  border-radius: 8px;
+  padding: var(--spLg);
+  background-color: #fff;
+  border: 1px solid var(--colOutBorder);
+
+  &-title {
+    font-weight: bold;
+    position: relative;
+    padding-bottom: var(--spMd);
+    margin-bottom: var(--spXl);
+    font-size: var(--txtTitle);
+    border-bottom: 1px solid var(--colBorder);
+
+    i {
+      color: transparent;
+      background: var(--gradientBg);
+      background-clip: text;
+    }
+  }
+}
+
+.search-bar {
+  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}

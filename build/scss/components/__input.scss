@@ -1,0 +1,35 @@
+.body input,
+.body select {
+  border-radius: 4px;
+  vertical-align: middle;
+  height: var(--conSize);
+  padding: var(--spSm) var(--spMd);
+  border: 1px solid var(--colBorder);
+
+  &:focus {
+    outline-color: var(--colMain);
+  }
+}
+
+.body .input-group {
+  display: flex;
+
+  input {
+    outline: 0;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .btn {
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+.body select {
+  min-width: 100px;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../images/angle-down-solid.svg) right 10px top 50% no-repeat;
+  background-size: 12px;
+}
