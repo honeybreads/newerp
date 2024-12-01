@@ -15,22 +15,18 @@
         <div class="data-board-input full">
           <p>프로젝트명</p>
           <div class="input-group">
-            <input
-              type="text"
-              value="프로젝트명"
-              readonly
-            />
+            <input type="text" value="프로젝트명" readonly />
             <button class="btn modal-trigger" data-modal="modal-1">
               프로젝트 찾기
             </button>
           </div>
         </div>
         <div class="data-board-input">
-          <p>작성자</p>
-          <input type="text" value="김세훈" />
+          <p>근무자</p>
+          <input type="text" value="홍길동" readonly />
         </div>
         <div class="data-board-input">
-          <p>날짜</p>
+          <p>근무일</p>
           <input type="date" value="2025-02-01" />
         </div>
         <div class="data-board-input">
@@ -58,6 +54,10 @@
               <p>분</p>
             </div>
           </div>
+        </div>
+        <div class="data-board-input full">
+          <p>작업내역</p>
+          <textarea></textarea>
         </div>
         <div class="data-board-input full">
           <p>비고</p>
@@ -89,23 +89,55 @@
                 <table class="table">
                   <thead>
                     <tr>
-                      <th><p>번호</p></th>
+                      <th class="tb-num"><p>번호</p></th>
                       <th><p>구분</p></th>
                       <th><p>프로젝트명</p></th>
                       <th><p>프로젝트코드</p></th>
-                      <th><p>작성자</p></th>
+                      <th class="tb-name"><p>등록자</p></th>
                     </tr>
                   </thead>
                   <tbody>
-                    @@for(var i = 0; i<5; i++){
+                    
                     <tr>
-                      <td class="tb-num"><p>`+(i+1)+`</p></td>
+                      <td><p>1</p></td>
                       <td><p>B2B</p></td>
-                      <td class="tb-hidden"><p>프로젝트명</p></td>
-                      <td class="tb-hidden"><p>AAAAA</p></td>
+                      <td class="tb-ellipsis"><a href="javascript:;">차기 국방광대역통합망 구축사업(국방 모바일망 관제)</a></td>
+                      <td><p>JJJJJ</p></td>
                       <td><p>김세훈</p></td>
                     </tr>
-                    }
+                    
+                    <tr>
+                      <td><p>2</p></td>
+                      <td><p>B2B</p></td>
+                      <td class="tb-ellipsis"><a href="javascript:;">이동형 5G 특화망 관제 시스템 개발(경호처 과제)</a></td>
+                      <td><p>IIIII</p></td>
+                      <td><p>김세훈</p></td>
+                    </tr>
+                    
+                    <tr>
+                      <td><p>3</p></td>
+                      <td><p>B2B</p></td>
+                      <td class="tb-ellipsis"><a href="javascript:;">AiON 2.0 기반 5G 정부망 관제(감사원)</a></td>
+                      <td><p>HHHHH</p></td>
+                      <td><p>김세훈</p></td>
+                    </tr>
+                    
+                    <tr>
+                      <td><p>4</p></td>
+                      <td><p>B2B</p></td>
+                      <td class="tb-ellipsis"><a href="javascript:;">AiON 2.0 기반 5G 정부망 관제(우주항공청)</a></td>
+                      <td><p>GGGGG</p></td>
+                      <td><p>김세훈</p></td>
+                    </tr>
+                    
+                    <tr>
+                      <td><p>5</p></td>
+                      <td><p>B2B</p></td>
+                      <td class="tb-ellipsis"><a href="javascript:;">AiON 2.0 기반 5G 정부망 관제(한국수자원)</a></td>
+                      <td><p>FFFFF</p></td>
+                      <td><p>김세훈</p></td>
+                    </tr>
+                    
                   </tbody>
                 </table>
               </div>
@@ -144,7 +176,7 @@
       </div>
       <!-- foot -->
       <div class="data-board-foot">
-        <a href="./project2_list.html" class="btn outline">리스트</a>
+        <a href="./project2_list.html" class="btn outline">목록</a>
         <button class="btn primary">수정</button>
       </div>
     </form>

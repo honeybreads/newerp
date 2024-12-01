@@ -17,13 +17,20 @@
   td,
   th {
     width: auto;
-    height: 36px;
+    height: 42px;
     text-align: center;
     padding: var(--spMd) var(--spLg);
     vertical-align: middle;
 
     &.tb-num {
-      width: 52px;
+      width: 60px;
+    }
+    &.tb-name {
+      width: 90px;
+    }
+
+    &.tb-date {
+      width: 120px;
     }
 
     &.tb-hidden {
@@ -69,6 +76,19 @@
       & * {
         white-space: nowrap;
       }
+      &.tb-ellipsis {
+        min-width: 170px;
+        max-width: 1px;
+        text-align: left;
+
+        & * {
+          display: block;
+          width: 100%;
+          overflow: hidden;
+          word-break: break-all;
+          text-overflow: ellipsis;
+        }
+      }
     }
   }
 }
@@ -84,9 +104,10 @@
   &:not(:has(.btn)) {
     justify-content: center;
   }
-  .btn {
-    margin-left: auto;
-  }
+}
+
+.list_info select{
+  margin-right: 4px;
 }
 
 .pagination {

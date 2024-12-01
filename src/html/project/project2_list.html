@@ -1,11 +1,11 @@
 <include src="../include/__head.html">
-  <title>프로젝트 공수 리스트</title>
+  <title>프로젝트 공수 목록</title>
 </include>
 <!-- body -->
 <include src="../include/__layout.html">
   <h2 class="main-title">
     <i class="fa-solid fa-list"></i>
-    프로젝트 공수 리스트
+    프로젝트 공수 목록
   </h2>
   <article class="table-area">
     <h3 class="hidden">테이블 영역</h3>
@@ -23,45 +23,234 @@
       <table class="table">
         <thead>
           <tr>
-            <th><p>번호</p></th>
+            <th class="tb-num"><p>번호</p></th>
             <th><p>구분</p></th>
             <th><p>프로젝트명</p></th>
             <th><p>프로젝트코드</p></th>
-            <th><p>작성자</p></th>
-            <th><p>등록자</p></th>
-            <th><p>등록일</p></th>
-            <th><p>근무시간</p></th>
-            <th><p>야간근무</p></th>
-            <th><p>총시간</p></th>
-            <th><p>수정</p></th>
+            <th class="tb-name"><p>근무자</p></th>
+            <th class="tb-name"><p>등록자</p></th>
+            <th class="tb-date"><p>근무일</p></th>
+            <th class="tb-num"><p>근무시간</p></th>
+            <th class="tb-num"><p>야간근무</p></th>
+            <th class="tb-num"><p>총시간</p></th>
+            <th class="tb-num"><p>수정</p></th>
           </tr>
         </thead>
         <tbody>
-          @@for(var i = 0; i<10; i++){
+          
           <tr>
-            <td class="tb-num"><p>`+(i+1)+`</p></td>
+            <td><p>1</p></td>
             <td><p>B2B</p></td>
-            <td class="tb-hidden">
-              <a href="./project_view.html">프로젝트명</a>
+            <td class="tb-ellipsis">
+              <a href="./project3_view.html">AiON 2.0 기반 5G 정부망 관제(감사원)</a>
             </td>
-            <td class="tb-hidden"><p>AAAAA</p></td>
+            <td><p>HHHHH</p></td>
+            <td><p>홍길동</p></td>
             <td><p>김세훈</p></td>
             <td><p>2024-02-01</p></td>
-            <td><p>2024-02-01</p></td>
-            <td class="tb-num"><p>18</p></td>
-            <td class="tb-num"><p>5</p></td>
-            <td class="tb-num"><p>23</p></td>
-            <td class="tb-num">
+            <td><p>18</p></td>
+            <td><p>5</p></td>
+            <td><p>23</p></td>
+            <td>
               <a class="btn icon" href="./project2_modify.html">
                 <i class="fa-solid fa-pen-to-square"></i>
               </a>
             </td>
           </tr>
-          }
+          
+          <tr>
+            <td><p>2</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-ellipsis">
+              <a href="./project3_view.html">AiON 2.0 기반 5G 정부망 관제(감사원)</a>
+            </td>
+            <td><p>HHHHH</p></td>
+            <td><p>홍길동</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2024-02-01</p></td>
+            <td><p>18</p></td>
+            <td><p>5</p></td>
+            <td><p>23</p></td>
+            <td>
+              <a class="btn icon" href="./project2_modify.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><p>3</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-ellipsis">
+              <a href="./project3_view.html">AiON 2.0 기반 5G 정부망 관제(감사원)</a>
+            </td>
+            <td><p>HHHHH</p></td>
+            <td><p>홍길동</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2024-02-01</p></td>
+            <td><p>18</p></td>
+            <td><p>5</p></td>
+            <td><p>23</p></td>
+            <td>
+              <a class="btn icon" href="./project2_modify.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><p>4</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-ellipsis">
+              <a href="./project3_view.html">차기 국방광대역통합망 구축사업</a>
+            </td>
+            <td><p>EEEEE</p></td>
+            <td><p>홍길동</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2024-02-01</p></td>
+            <td><p>18</p></td>
+            <td><p>5</p></td>
+            <td><p>23</p></td>
+            <td>
+              <a class="btn icon" href="./project2_modify.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><p>5</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-ellipsis">
+              <a href="./project3_view.html">AiON 2.0 기반 전송망관제(코스콤)</a>
+            </td>
+            <td><p>CCCCC</p></td>
+            <td><p>홍길동</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2024-02-01</p></td>
+            <td><p>18</p></td>
+            <td><p>5</p></td>
+            <td><p>23</p></td>
+            <td>
+              <a class="btn icon" href="./project2_modify.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><p>6</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-ellipsis">
+              <a href="./project3_view.html">AiON 2.0 기반 전송망관제(코스콤)</a>
+            </td>
+            <td><p>CCCCC</p></td>
+            <td><p>홍길동</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2024-02-01</p></td>
+            <td><p>18</p></td>
+            <td><p>5</p></td>
+            <td><p>23</p></td>
+            <td>
+              <a class="btn icon" href="./project2_modify.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><p>7</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-ellipsis">
+              <a href="./project3_view.html">차기 국방광대역통합망 구축사업</a>
+            </td>
+            <td><p>EEEEE</p></td>
+            <td><p>홍길동</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2024-02-01</p></td>
+            <td><p>18</p></td>
+            <td><p>5</p></td>
+            <td><p>23</p></td>
+            <td>
+              <a class="btn icon" href="./project2_modify.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><p>8</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-ellipsis">
+              <a href="./project3_view.html">AiON 2.0 기반 5G 정부망 관제(우주항공청)</a>
+            </td>
+            <td><p>GGGGG</p></td>
+            <td><p>홍길동</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2024-02-01</p></td>
+            <td><p>18</p></td>
+            <td><p>5</p></td>
+            <td><p>23</p></td>
+            <td>
+              <a class="btn icon" href="./project2_modify.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><p>9</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-ellipsis">
+              <a href="./project3_view.html">AiON 2.0 기반 5G 정부망 관제(우주항공청)</a>
+            </td>
+            <td><p>GGGGG</p></td>
+            <td><p>홍길동</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2024-02-01</p></td>
+            <td><p>18</p></td>
+            <td><p>5</p></td>
+            <td><p>23</p></td>
+            <td>
+              <a class="btn icon" href="./project2_modify.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><p>10</p></td>
+            <td><p>B2B</p></td>
+            <td class="tb-ellipsis">
+              <a href="./project3_view.html">AiON 2.0 솔루션 등록, 인증</a>
+            </td>
+            <td><p>AAAAA</p></td>
+            <td><p>홍길동</p></td>
+            <td><p>김세훈</p></td>
+            <td><p>2024-02-01</p></td>
+            <td><p>18</p></td>
+            <td><p>5</p></td>
+            <td><p>23</p></td>
+            <td>
+              <a class="btn icon" href="./project2_modify.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </td>
+          </tr>
+          
         </tbody>
       </table>
     </div>
     <div class="table-foot">
+      <div class="list_info">
+        <select>
+          <option>10개씩</option>
+          <option>50개씩</option>
+          <option>100개씩</option>
+        </select>
+        총 1800개
+      </div>
+
       <ul class="pagination">
         <li class="pagination-list disabled">
           <button class="pagination-btn">
