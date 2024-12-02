@@ -1,0 +1,104 @@
+.report-body {
+  padding: 2px;
+  width: 1076px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.report-title {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &-item {
+    border: 1px solid #ccc;
+    display: flex;
+
+    &__name {
+      flex: none;
+      width: 140px;
+      padding: 12px;
+      font-weight: bold;
+      background-color: #efefef;
+    }
+
+    &__value {
+      flex: 1;
+      padding: 12px;
+    }
+
+    &:nth-of-type(2n) {
+      border-left: 0;
+    }
+
+    &:nth-of-type(n + 3) {
+      border-top: 0;
+    }
+  }
+}
+
+.data-table {
+  margin: 32px 0;
+  width: 100%;
+  table {
+    width: 100%;
+  }
+
+  td,
+  th {
+    line-height: 1.2;
+    padding: 12px 8px;
+    border: 1px solid #ccc;
+    word-break: keep-all;
+    p {
+      text-indent: -10px;
+      margin-left: 10px;
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  th {
+    white-space: nowrap;
+  }
+
+  .tr-col1 {
+    text-align: left;
+    background-color: #efefef;
+
+    p::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      margin-right: 8px;
+      display: inline-block;
+      background-color: #000;
+    }
+  }
+  .tr-col2 {
+    background-color: #efefef;
+  }
+
+  .td-title {
+    vertical-align: middle;
+  }
+
+  .td-nowrap {
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    p {
+      &:not(:last-of-type) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
