@@ -1,0 +1,52 @@
+<include src="../include/__head.html">
+  <link rel="stylesheet" href="../css/add.css" />
+  <title>회의실 정보</title>
+</include>
+<!-- body -->
+<include src="../include/__layout.html">
+  <h2 class="main-title">
+    <i class="fa-solid fa-pen-to-square"></i>
+    회의실 정보
+  </h2>
+  <article class="data-add">
+    <h3 class="hidden">회의실 정보 영역</h3>
+    <form>
+      <div class="data-board read">
+        <div class="data-board-input full">
+          <p>회의실명</p>
+          <input type="text" value="RM01_대회의실" />
+        </div>
+        <div class="data-board-input full">
+          <p>수용인원</p>
+          <div class="data-board-input number">
+            <input type="number" value="30" min="0" max="99"/>
+            <span>명</span>
+          </div>
+        </div>
+        <div class="data-board-input">
+          <p>위치</p>
+          <input type="text" value="로비좌측" />
+        </div>
+        <div class="data-board-input full">
+          <p>옵션</p>
+          <div class="data-board-inputgroup">
+            <div class="data-board-input number">
+              <input type="text" value="TV" />
+              <input type="number" value="1" />
+            </div>
+            <div class="data-board-input number">
+              <input type="text" value="빔 프로젝트" />
+              <input type="number" value="1" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- foot -->
+      <div class="data-board-foot">
+        <a href="./meeting_list.html" class="btn outline">목록</a>
+        <a href="./meeting_modify.html" class="btn primary">수정</a>
+        <button class="btn del">삭제</button>
+      </div>
+    </form>
+  </article>
+</include>

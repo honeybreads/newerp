@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/common.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="../css/common.css">
+    
+  <title>회의실 리스트</title>
+
+</head>
+
+<!-- body -->
+<body class="body">
+    <main class="main">
+        
+  <h2 class="main-title">
+    <i class="fa-solid fa-list"></i>
+    회의실 목록
+  </h2>
+  <article class="table-area">
+    <h3 class="hidden">테이블 영역</h3>
+    <div class="table-scroll">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="tb-num"><p>번호</p></th>
+            <th><p>회의실명</p></th>
+            <th class="tb-name"><p>수용 인원</p></th>
+            <th class="tb-option"><p>옵션</p></th>
+            <th class="tb-date"><p>위치</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 데이터가 없는 경우  -->
+          <!-- 
+            <tr>
+              <td colspan="5">등록된 데이터가 없습니다.</td>
+            </tr> 
+          -->
+          <tr>
+            <td><p>1</p></td>
+            <td class="tb-ellipsis">
+              <a href="./meeting_view.html">RM01_대회의실</a>
+            </td>
+            <td><p>30</p></td>
+            <td class="tb-ellipsis">
+              <p class="tb-list">
+                <span>TV 1</span>
+                <span>빔프로젝트 1</span>
+                <span>의자 30</span>
+              </p>
+            </td>
+            <td><p>로비 좌측</p></td>
+          </tr>
+          <tr>
+            <td><p>2</p></td>
+            <td class="tb-ellipsis">
+              <a href="./meeting_view.html">RM02_중회의실</a>
+            </td>
+            <td><p>15</p></td>
+            <td class="tb-ellipsis">
+              <p class="tb-list">
+                <span>TV 1</span>
+                <span>의자 15</span>
+              </p>
+            </td>
+            <td><p>안쪽 우측</p></td>
+          </tr>
+          <tr>
+            <td><p>3</p></td>
+            <td class="tb-ellipsis">
+              <a href="./meeting_view.html">RM03_중회의실</a>
+            </td>
+            <td><p>15</p></td>
+            <td class="tb-ellipsis">
+              <p class="tb-list">
+                <span>TV 1</span>
+                <span>의자 15</span>
+              </p>
+            </td>
+            <td><p>안쪽 좌측</p></td>
+          </tr>
+          <tr>
+            <td><p>4</p></td>
+            <td class="tb-ellipsis">
+              <a href="./meeting_view.html">RM04_소회의실</a>
+            </td>
+            <td><p>6</p></td>
+            <td class="tb-ellipsis">
+              <p class="tb-list">
+                <span>TV 1</span>
+                <span>의자 6</span>
+              </p>
+            </td>
+            <td><p>좌측 첫번째</p></td>
+          </tr>
+          
+          <tr>
+            <td><p>5</p></td>
+            <td class="tb-ellipsis">
+              <a href="./meeting_view.html">RM05_소회의실</a>
+            </td>
+            <td><p>6</p></td>
+            <td class="tb-ellipsis">
+              <p class="tb-list">
+                <span>의자 6</span>
+              </p>
+            </td>
+            <td><p>좌측 두번째</p></td>
+          </tr>
+          
+          <tr>
+            <td><p>6</p></td>
+            <td class="tb-ellipsis">
+              <a href="./meeting_view.html">RM06_소회의실</a>
+            </td>
+            <td><p>6</p></td>
+            <td class="tb-ellipsis">
+              <p class="tb-list">
+                <span>의자 6</span>
+              </p>
+            </td>
+            <td><p>좌측 두번째</p></td>
+          </tr>
+          
+          <tr>
+            <td><p>7</p></td>
+            <td class="tb-ellipsis">
+              <a href="./meeting_view.html">RM07_소회의실</a>
+            </td>
+            <td><p>6</p></td>
+            <td class="tb-ellipsis">
+              <p class="tb-list">
+                <span>의자 6</span>
+              </p>
+            </td>
+            <td><p>좌측 두번째</p></td>
+          </tr>
+          
+          <tr>
+            <td><p>8</p></td>
+            <td class="tb-ellipsis">
+              <a href="./meeting_view.html">RM08_소회의실</a>
+            </td>
+            <td><p>6</p></td>
+            <td class="tb-ellipsis">
+              <p class="tb-list">
+                <span>의자 6</span>
+              </p>
+            </td>
+            <td><p>좌측 두번째</p></td>
+          </tr>
+          
+          <tr>
+            <td><p>9</p></td>
+            <td class="tb-ellipsis">
+              <a href="./meeting_view.html">RM09_소회의실</a>
+            </td>
+            <td><p>6</p></td>
+            <td class="tb-ellipsis">
+              <p class="tb-list">
+                <span>의자 6</span>
+              </p>
+            </td>
+            <td><p>좌측 두번째</p></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="table-foot">
+      <div class="list_info">
+        <p>
+          총 9개<br />
+          page ( 1 / 1 )
+        </p>
+      </div>
+      <ul class="pagination">
+        <li class="pagination-list disabled">
+          <button class="pagination-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </li>
+        <li class="pagination-list active">
+          <button class="pagination-btn">1</button>
+        </li>
+        <li class="pagination-list disabled">
+          <button class="pagination-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </li>
+      </ul>
+      <a href="./meeting_add.html" class="btn">등록</a>
+    </div>
+  </article>
+
+    </main>
+</body>

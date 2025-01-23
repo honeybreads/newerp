@@ -1,4 +1,5 @@
 .btn {
+  line-height: 0;
   border: 0;
   color: #fff;
   cursor: pointer;
@@ -18,6 +19,13 @@
     background: var(--colMain);
     &:hover {
       background: var(--colMainDarken);
+    }
+  }
+
+  &.del{
+    background: var(--colDel);
+    &:hover{
+      background: var(--colDelDarken);
     }
   }
 

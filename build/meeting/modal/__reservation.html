@@ -1,0 +1,114 @@
+<div class="modal " data-modal="modal-1">
+  <div class="modal-con">
+    <div class="modal-head">
+      <p class="modal-head-title">
+         회의실 예약 
+        
+        
+      </p>
+      <button class="modal-head-close modal-trigger" data-modal="modal-1">
+        <span class="blind">모달닫기</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="data-add">
+        <div class="data-board ">
+          <div class="data-board-input full">
+            <p>회의실명</p>
+            <select>
+              <option value="none">--선택해주세요--</option>
+              <option value="RM01_대회의실(30명)" >RM01_대회의실(30명)</option>
+              <option value="RM02_중회의실(15명)">RM02_중회의실(15명)</option>
+            </select>
+          </div>
+          <div class="data-board-input full">
+            <p>일시</p>
+            <div class="data-board-input date-full">
+              <input 
+                type="date" 
+                value="" 
+              />
+              <div class="data-board-input">
+                <select class="time">
+                  
+                </select>
+                <span>-</span>
+                <select class="time">
+                  
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="data-board-input full">
+            <p>예약 내용</p>
+            <input 
+              type="text" 
+              placeholder="예약 내용을 입력하세요" 
+              value="" 
+            />
+          </div>
+          <div class="data-board-input full">
+            <p>예약자</p>
+            <input 
+              type="text" 
+              disabled
+              value="" 
+            />
+          </div>
+          <div class="data-board-input full">
+            <p>참석자</p>
+            <textarea
+              placeholder="참석자를 입력하세요 ( ',' 콤마로 구분 해주세요 )"
+            ></textarea>
+          </div>
+        </div>
+        <div class="data-board-foot">
+          
+            <button class="btn outline modal-trigger" data-modal="modal-1">
+              취소
+            </button>
+            <button class="btn primary modal-trigger" data-modal="modal-1">
+              저장
+            </button>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 모달 관련 스크립트 -->
+<script>
+  // 시간, 분 만들기
+  const selectMinute = document.querySelectorAll("select.minute");
+  const selectTIme = document.querySelectorAll("select.time");
+
+  const createOption = (number) => {
+    const option = document.createElement("option");
+    option.setAttribute.value = number;
+    option.innerText = number;
+    return option;
+  };
+
+  selectTIme.forEach((time) => {
+    [...Array(20)].forEach((_, index) => {
+      if(index > 6)  {
+        let tiem = index < 10 ? "0"+index: index
+        time.append(createOption(tiem+":00"))
+        time.append(createOption(tiem+":30"))
+      };
+    });
+  });
+
+  // modal
+  const modalTrigger = document.querySelectorAll(".modal-trigger");
+  modalTrigger.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const modalName = btn.getAttribute("data-modal");
+      const modal = document.querySelector(`.modal[data-modal=${modalName}]`);
+      modal.classList.toggle("active");
+    });
+  });
+</script>

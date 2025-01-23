@@ -21,6 +21,13 @@
     }
   }
 
+  &.del{
+    background: var(--colDel);
+    &:hover{
+      background: var(--colDelDarken);
+    }
+  }
+
   &.outline {
     color: var(--colDark);
     background-color: transparent;

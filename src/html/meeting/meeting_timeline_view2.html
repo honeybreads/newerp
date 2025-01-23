@@ -1,0 +1,14 @@
+<include src="../include/__head.html">
+  <link rel="stylesheet" href="../css/add.css" />
+  <link rel="stylesheet" href="../css/timeline.css" />
+  <title>회의실 타임라인 예약 정보 (타인)</title>
+</include>
+<!-- body -->
+<include src="../include/__layout.html">
+  <h2 class="main-title">
+    <i class="fa-regular fa-calendar"></i>
+    회의실 예약 현황
+  </h2>
+  @@include('./table/__timeline.html')
+  @@include('./modal/__reservation.html',{active:1,type:1,user:2})
+</include>

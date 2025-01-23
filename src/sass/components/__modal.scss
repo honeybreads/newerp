@@ -9,10 +9,10 @@
     position: absolute;
     border-radius: 8px;
     align-content: center;
-    backdrop-filter: blur(2px);
     background-color: rgba(0, 0, 0, 0.3);
   
     &.active {
+      z-index: 999;
       display: block;
     }
   
@@ -63,3 +63,8 @@
     }
   }
   
+.modal{
+  .data-board-input p{
+    font-size: var(--txtSm);
+  }
+}

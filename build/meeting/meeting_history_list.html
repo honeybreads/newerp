@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/common.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="../css/common.css">
+    
+  <link rel="stylesheet" href="../css/add.css" />
+  <title>회의실 예약 이력 리스트</title>
+
+</head>
+
+<!-- body -->
+<body class="body">
+    <main class="main">
+        
+  <h2 class="main-title">
+    <i class="fa-solid fa-list"></i>
+    회의실 예약 목록
+  </h2>
+  <article class="table-area">
+  <h3 class="hidden">테이블 영역</h3>
+  <div class="table-scroll">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="tb-num"><p>번호</p></th>
+          <th class="tb-meeting"><p>회의실명</p></th>
+          <th><p>예약내용</p></th>
+          <th class="tb-name"><p>예약자</p></th>
+          <th class="tb-date"><p>일시</p></th>
+          <th class="tb-date"><p>진행상황</p></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 데이터가 없는 경우  -->
+        <!-- 
+          <tr>
+            <td colspan="6">등록된 데이터가 없습니다.</td>
+          </tr> 
+        -->
+        <tr>
+          <td><p>1</p></td>
+          <td><p>RM01_대회의실</p></td>
+          <td class="tb-ellipsis">
+            <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
+          </td>
+          <td><p>홍길동</p></td>
+          <td>
+            <p>2025-01-01</p>
+            <p>11:30~13:00</p>
+          </td>
+          <td><p>진행예정</p></td>
+        </tr>
+        <tr>
+          <td><p>2</p></td>
+          <td><p>RM02_중회의실</p></td>
+          <td class="tb-ellipsis">
+            <a href="./meeting_history_view2.html">ㅇㅇ 관련 회의</a>
+          </td>
+          <td><p>오석영</p></td>
+          <td>
+            <p>2025-01-01</p>
+            <p>11:30~13:00</p>
+          </td>
+          <td><p>진행예정</p></td>
+        </tr>
+        <tr>
+          <td><p>3</p></td>
+          <td><p>RM03_소회의실</p></td>
+          <td class="tb-ellipsis">
+            <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
+          </td>
+          <td><p>홍길동</p></td>
+          <td>
+            <p>2025-01-01</p>
+            <p>11:30~13:00</p>
+          </td>
+          <td><p>진행예정</p></td>
+        </tr>
+        
+        <tr>
+          <td><p>4</p></td>
+          <td><p>RM04_소회의실</p></td>
+          <td class="tb-ellipsis">
+            <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
+          </td>
+          <td><p>홍길동</p></td>
+          <td>
+            <p>2025-01-01</p>
+            <p>11:30~13:00</p>
+          </td>
+          <td><p>진행예정</p></td>
+        </tr>
+        
+        <tr>
+          <td><p>5</p></td>
+          <td><p>RM04_소회의실</p></td>
+          <td class="tb-ellipsis">
+            <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
+          </td>
+          <td><p>홍길동</p></td>
+          <td>
+            <p>2025-01-01</p>
+            <p>11:30~13:00</p>
+          </td>
+          <td><p>진행예정</p></td>
+        </tr>
+        
+        <tr>
+          <td><p>6</p></td>
+          <td><p>RM04_소회의실</p></td>
+          <td class="tb-ellipsis">
+            <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
+          </td>
+          <td><p>홍길동</p></td>
+          <td>
+            <p>2025-01-01</p>
+            <p>11:30~13:00</p>
+          </td>
+          <td><p>진행예정</p></td>
+        </tr>
+        
+        <tr>
+          <td><p>7</p></td>
+          <td><p>RM04_소회의실</p></td>
+          <td class="tb-ellipsis">
+            <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
+          </td>
+          <td><p>홍길동</p></td>
+          <td>
+            <p>2025-01-01</p>
+            <p>11:30~13:00</p>
+          </td>
+          <td><p>진행예정</p></td>
+        </tr>
+        
+        <tr>
+          <td><p>8</p></td>
+          <td><p>RM04_소회의실</p></td>
+          <td class="tb-ellipsis">
+            <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
+          </td>
+          <td><p>홍길동</p></td>
+          <td>
+            <p>2025-01-01</p>
+            <p>11:30~13:00</p>
+          </td>
+          <td><p>진행예정</p></td>
+        </tr>
+        
+        <tr>
+          <td><p>9</p></td>
+          <td><p>RM04_소회의실</p></td>
+          <td class="tb-ellipsis">
+            <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
+          </td>
+          <td><p>홍길동</p></td>
+          <td>
+            <p>2025-01-01</p>
+            <p>11:30~13:00</p>
+          </td>
+          <td><p>진행예정</p></td>
+        </tr>
+        
+        <tr>
+          <td><p>10</p></td>
+          <td><p>RM04_소회의실</p></td>
+          <td class="tb-ellipsis">
+            <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
+          </td>
+          <td><p>홍길동</p></td>
+          <td>
+            <p>2025-01-01</p>
+            <p>11:30~13:00</p>
+          </td>
+          <td><p>진행예정</p></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  <div class="table-foot">
+    <div class="list_info">
+      <p>
+        총 6개<br />
+        page ( 1 / 1 )
+      </p>
+    </div>
+    <ul class="pagination">
+      <li class="pagination-list disabled">
+        <button class="pagination-btn">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      </li>
+      <li class="pagination-list active">
+        <button class="pagination-btn">1</button>
+      </li>
+      <li class="pagination-list disabled">
+        <button class="pagination-btn">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </li>
+    </ul>
+    <a href="./meeting_history_add.html" class="btn modal-trigger"> 예약 </a>
+  </div>
+</article>
+
+
+    </main>
+</body>

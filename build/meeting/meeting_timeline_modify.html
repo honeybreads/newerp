@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/common.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="../css/common.css">
+    
+  <link rel="stylesheet" href="../css/add.css" />
+  <link rel="stylesheet" href="../css/timeline.css" />
+  <title>회의실 타임라인 예약 수정</title>
+
+</head>
+
+<!-- body -->
+<body class="body">
+    <main class="main">
+        
+  <h2 class="main-title">
+    <i class="fa-regular fa-calendar"></i>
+    회의실 예약 현황
+  </h2>
+  <article class="table-area">
+  <h3 class="hidden">타임라인 영역</h3>
+  <div class="timeline-head">
+    <div class="timeline-head-date">
+      <button class="btn icon outline">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <p class="timeline-head-date__title">2025.1.20 (월)</p>
+      <button class="btn icon outline">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+      <input type="date" />
+      <button class="btn outline">오늘</button>
+    </div>
+    <div class="timeline-head-legend">
+      <p><span></span>예약 가능</p>
+      <p><span></span>예약 중</p>
+      <p><span></span>내 예약</p>
+    </div>
+  </div>
+  <div class="timeline-body">
+    <div class="timeline-grid">
+      <!-- 회의실 목록 -->
+      <div class="timeline-grid-inner meetingRoom">
+        <!-- 첫번째 열 샘플 이후 스크립트 생성 -->
+        <div class="timeline-grid-item"><p></p></div>
+        <div class="timeline-grid-item" title="30명 | TV 1 | 빔프로젝트 |...">
+          <p>RM01_대회의실</p>
+        </div>
+      </div>
+      <!-- 시간 -->
+      <div class="timeline-grid-inner book">
+        <!-- 시간 범위 스크립트 생성 아래 주석 예시 -->
+        <!-- 
+            <div class="timeline-grid-group">
+              <div class="timeline-grid-item range">
+                <p>7</p>
+              </div>
+            </div> 
+          -->
+        <!-- 회의실 시간 선택 -->
+        <!-- 첫번째 샘플 이후 스크립트 생성 -->
+        <div class="timeline-grid-group">
+          <div class="timeline-grid-item">
+            <span class="timeline-grid-item__part" title="07:00 ~ 07:30"></span
+            ><span
+              class="timeline-grid-item__part"
+              title="07:30 ~ 08:00"
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span
+              class="timeline-grid-item__part active"
+              title="07:00 ~ 10:00 예약자: 홍길동 "
+              onclick="location.href='./meeting_timeline_view.html'"
+            ></span
+            ><span
+              class="timeline-grid-item__part active"
+              title="07:00 ~ 10:00 예약자: 홍길동 "
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span
+              class="timeline-grid-item__part active"
+              title="07:00 ~ 10:00 예약자: 홍길동 "
+            ></span
+            ><span
+              class="timeline-grid-item__part active"
+              title="07:00 ~ 10:00 예약자: 홍길동 "
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span class="timeline-grid-item__part" title="10:00 ~ 10:30"></span
+            ><span
+              class="timeline-grid-item__part"
+              title="10:30 ~ 11:00"
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span class="timeline-grid-item__part" title="11:00 ~ 11:30"></span
+            ><span
+              class="timeline-grid-item__part"
+              title="11:30 ~ 12:00"
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span
+              class="timeline-grid-item__part active2"
+              title="12:00 ~ 14:30 예약자: 오석영 "
+            ></span
+            ><span
+              class="timeline-grid-item__part active2"
+              title="12:00 ~ 14:30 예약자: 오석영 "
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span
+              class="timeline-grid-item__part active2"
+              title="12:00 ~ 14:30 예약자: 오석영 "
+            ></span
+            ><span
+              class="timeline-grid-item__part active2"
+              title="12:00 ~ 14:30 예약자: 오석영 "
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span
+              class="timeline-grid-item__part active2"
+              title="12:00 ~ 14:30 예약자: 오석영 "
+            ></span
+            ><span
+              class="timeline-grid-item__part"
+              title="14:30 ~ 15:00"
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span class="timeline-grid-item__part" title="15:00 ~ 15:30"></span
+            ><span
+              class="timeline-grid-item__part"
+              title="15:30 ~ 16:00"
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span class="timeline-grid-item__part" title="16:00 ~ 16:30"></span
+            ><span
+              class="timeline-grid-item__part"
+              title="16:30 ~ 17:00"
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span class="timeline-grid-item__part" title="17:00 ~ 17:30"></span
+            ><span
+              class="timeline-grid-item__part"
+              title="17:30 ~ 18:00"
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span class="timeline-grid-item__part" title="18:00 ~ 18:30"></span
+            ><span
+              class="timeline-grid-item__part"
+              title="18:30 ~ 19:00"
+            ></span>
+          </div>
+          <div class="timeline-grid-item">
+            <span class="timeline-grid-item__part" title="19:00 ~ 19:30"></span
+            ><span
+              class="timeline-grid-item__part"
+              title="19:30 ~ 20:00"
+            ></span>
+          </div>
+        </div>
+        <!-- 첫번째 열 샘플 이후 스크립트 생성 -->
+      </div>
+    </div>
+  </div>
+</article>
+<!-- 타임라인 관련 임시 스크립트 -->
+<script>
+  const book = document.querySelector(".timeline-grid-inner.book");
+  const meeting = document.querySelector(".timeline-grid-inner.meetingRoom");
+  const meetingRooms = [
+    { name: "RM02_중회의실", option: "15명 | TV 1 | 의자 15 |..." },
+    { name: "RM03_중회의실", option: "15명 | TV 1 | 의자 15 |..." },
+    { name: "RM04_소회의실", option: "6명 | TV 1 | 의자 8" },
+    { name: "RM05_소회의실", option: "6명 | TV 1 | 의자 8" },
+    { name: "RM06_소회의실", option: "6명 | TV 1 | 의자 8" },
+    { name: "RM07_소회의실", option: "6명 | TV 1 | 의자 8" },
+    { name: "RM08_소회의실", option: "6명 | TV 1 | 의자 8" },
+    { name: "RM09_소회의실", option: "6명 | TV 1 | 의자 8" },
+    { name: "RM10_소회의실", option: "6명 | TV 1 | 의자 8" },
+  ];
+
+  const startTime = 7;
+  const flowTime = 13;
+
+  // --- 유틸리티 함수 ---
+  const createTag = ({ tag, className = "", text = "", title = "" }) => {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (text) element.innerHTML = text;
+    if (title) element.title = title;
+    return element;
+  };
+
+  const formatTime = (num) => (num < 10 ? `0${num}` : `${num}`);
+
+  // --- 스타일 지정 ---
+  book.style.setProperty("--column", flowTime);
+
+  // --- 시간 범위 생성 ---
+  const createTimeRange = () => {
+    const fragment = document.createDocumentFragment();
+    const parentElement = createTag({
+      tag: "div",
+      className: "timeline-grid-group",
+    });
+
+    Array.from({ length: flowTime }, (_, index) => {
+      const hour = index + startTime;
+      const timeBlock = createTag({
+        tag: "div",
+        className: "timeline-grid-item range",
+      });
+      const timeLabel = createTag({ tag: "p", text: hour });
+      timeBlock.appendChild(timeLabel);
+      parentElement.appendChild(timeBlock);
+    });
+
+    fragment.appendChild(parentElement);
+    book.prepend(fragment);
+  };
+
+  // --- 미팅룸 생성 ---
+  const createMeetingRoom = (room) => {
+    const roomElement = createTag({
+      tag: "div",
+      className: "timeline-grid-item",
+      title: room.option,
+    });
+    const roomLabel = createTag({ tag: "p", text: room.name });
+    roomElement.appendChild(roomLabel);
+    meeting.appendChild(roomElement);
+  };
+
+  // --- 예약 시간 칸 생성 ---
+  const createBookItem = () => {
+    const fragment = document.createDocumentFragment();
+    const parentElement = createTag({
+      tag: "div",
+      className: "timeline-grid-group",
+    });
+
+    Array.from({ length: flowTime }, (_, index) => {
+      const hour = index + startTime;
+      const nextHour = hour + 1;
+
+      const timeBlock = createTag({
+        tag: "div",
+        className: "timeline-grid-item",
+      });
+      const part1 = createTag({
+        tag: "span",
+        className: "timeline-grid-item__part",
+        title: `${formatTime(hour)}:00 ~ ${formatTime(hour)}:30`,
+      });
+      const part2 = createTag({
+        tag: "span",
+        className: "timeline-grid-item__part",
+        title: `${formatTime(hour)}:30 ~ ${formatTime(nextHour)}:00`,
+      });
+
+      timeBlock.appendChild(part1);
+      timeBlock.appendChild(part2);
+      parentElement.appendChild(timeBlock);
+    });
+
+    fragment.appendChild(parentElement);
+    book.appendChild(fragment);
+  };
+
+  // --- 시간 범위 및 미팅룸 생성 ---
+  createTimeRange();
+
+  meetingRooms.forEach((room) => {
+    createBookItem();
+    createMeetingRoom(room);
+  });
+
+  // 이동 확인차 임시 작성 
+  const gridItem = document.querySelectorAll(".timeline-grid-item__part");
+  gridItem.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      if (item.classList.contains("active")) {
+        location.href = "./meeting_timeline_view.html";
+      } else if (item.classList.contains("active2")) {
+        location.href = "./meeting_timeline_view2.html";
+      } else {
+        location.href = "./meeting_timeline_add.html";
+      }
+    });
+  });
+</script>
+
+  <div class="modal active" data-modal="modal-1">
+  <div class="modal-con">
+    <div class="modal-head">
+      <p class="modal-head-title">
+        
+        
+         예약 정보 수정
+      </p>
+      <button class="modal-head-close modal-trigger" data-modal="modal-1">
+        <span class="blind">모달닫기</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="data-add">
+        <div class="data-board ">
+          <div class="data-board-input full">
+            <p>회의실명</p>
+            <select>
+              <option value="none">--선택해주세요--</option>
+              <option value="RM01_대회의실(30명)" selected>RM01_대회의실(30명)</option>
+              <option value="RM02_중회의실(15명)">RM02_중회의실(15명)</option>
+            </select>
+          </div>
+          <div class="data-board-input full">
+            <p>일시</p>
+            <div class="data-board-input date-full">
+              <input 
+                type="date" 
+                value="2025-01-01" 
+              />
+              <div class="data-board-input">
+                <select class="time">
+                  
+                    <option selected>11:30</option>
+                  
+                </select>
+                <span>-</span>
+                <select class="time">
+                  
+                    <option selected>13:00</option>
+                  
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="data-board-input full">
+            <p>예약 내용</p>
+            <input 
+              type="text" 
+              placeholder="예약 내용을 입력하세요" 
+              value="ㅇㅇ관련 회의" 
+            />
+          </div>
+          <div class="data-board-input full">
+            <p>예약자</p>
+            <input 
+              type="text" 
+              disabled
+              value="홍길동" 
+            />
+          </div>
+          <div class="data-board-input full">
+            <p>참석자</p>
+            <textarea
+              placeholder="참석자를 입력하세요 ( ',' 콤마로 구분 해주세요 )"
+            >김영조, 오석영, 김선미, 유태원</textarea>
+          </div>
+        </div>
+        <div class="data-board-foot">
+          
+            <button class="btn outline modal-trigger" data-modal="modal-1">
+              취소
+            </button>
+            <button class="btn primary modal-trigger" data-modal="modal-1">
+              저장
+            </button>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 모달 관련 스크립트 -->
+<script>
+  // 시간, 분 만들기
+  const selectMinute = document.querySelectorAll("select.minute");
+  const selectTIme = document.querySelectorAll("select.time");
+
+  const createOption = (number) => {
+    const option = document.createElement("option");
+    option.setAttribute.value = number;
+    option.innerText = number;
+    return option;
+  };
+
+  selectTIme.forEach((time) => {
+    [...Array(20)].forEach((_, index) => {
+      if(index > 6)  {
+        let tiem = index < 10 ? "0"+index: index
+        time.append(createOption(tiem+":00"))
+        time.append(createOption(tiem+":30"))
+      };
+    });
+  });
+
+  // modal
+  const modalTrigger = document.querySelectorAll(".modal-trigger");
+  modalTrigger.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const modalName = btn.getAttribute("data-modal");
+      const modal = document.querySelector(`.modal[data-modal=${modalName}]`);
+      modal.classList.toggle("active");
+    });
+  });
+</script>
+
+    </main>
+</body>
