@@ -40,9 +40,9 @@
     &.tb-hidden {
       & * {
         overflow: hidden;
-        word-break: break-all;
         display: -webkit-box;
         -webkit-line-clamp: 1;
+        word-break: break-all;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
       }
@@ -143,8 +143,8 @@
     &.active {
       .pagination-btn {
         color: #fff;
-        background-color: var(--colDark);
         border-color: var(--colDark);
+        background-color: var(--colDark);
       }
     }
 

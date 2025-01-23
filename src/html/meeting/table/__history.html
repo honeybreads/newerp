@@ -47,7 +47,7 @@
         </tr>
         <tr>
           <td><p>3</p></td>
-          <td><p>RM03_소회의실</p></td>
+          <td><p>RM03_중회의실</p></td>
           <td class="tb-ellipsis">
             <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
           </td>
@@ -58,10 +58,10 @@
           </td>
           <td><p>진행예정</p></td>
         </tr>
-        @@for(var i = 4; i<11; i++){
+        @@for(var i = 4; i<10; i++){
         <tr>
           <td><p>`+i+`</p></td>
-          <td><p>RM04_소회의실</p></td>
+          <td><p>RM0`+i+`_소회의실</p></td>
           <td class="tb-ellipsis">
             <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
           </td>
@@ -73,13 +73,26 @@
           <td><p>진행예정</p></td>
         </tr>
         }
+        <tr>
+          <td><p>10</p></td>
+          <td><p>RM10_소회의실</p></td>
+          <td class="tb-ellipsis">
+            <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
+          </td>
+          <td><p>홍길동</p></td>
+          <td>
+            <p>2025-01-01</p>
+            <p>11:30~13:00</p>
+          </td>
+          <td><p>진행예정</p></td>
+        </tr>
       </tbody>
     </table>
   </div>
   <div class="table-foot">
     <div class="list_info">
       <p>
-        총 6개<br />
+        총 10개<br />
         page ( 1 / 1 )
       </p>
     </div>
@@ -98,6 +111,6 @@
         </button>
       </li>
     </ul>
-    <a href="./meeting_history_add.html" class="btn modal-trigger"> 예약 </a>
+    <a href="./meeting_history_add.html" class="btn"> 예약 </a>
   </div>
 </article>

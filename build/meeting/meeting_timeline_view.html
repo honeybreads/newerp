@@ -400,6 +400,7 @@
     const option = document.createElement("option");
     option.setAttribute.value = number;
     option.innerText = number;
+    option.disabled = number === "10:00" ? true :false; // 예약 시 비활성화 테스트
     return option;
   };
 

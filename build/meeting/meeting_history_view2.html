@@ -71,7 +71,7 @@
         </tr>
         <tr>
           <td><p>3</p></td>
-          <td><p>RM03_소회의실</p></td>
+          <td><p>RM03_중회의실</p></td>
           <td class="tb-ellipsis">
             <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
           </td>
@@ -99,7 +99,7 @@
         
         <tr>
           <td><p>5</p></td>
-          <td><p>RM04_소회의실</p></td>
+          <td><p>RM05_소회의실</p></td>
           <td class="tb-ellipsis">
             <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
           </td>
@@ -113,7 +113,7 @@
         
         <tr>
           <td><p>6</p></td>
-          <td><p>RM04_소회의실</p></td>
+          <td><p>RM06_소회의실</p></td>
           <td class="tb-ellipsis">
             <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
           </td>
@@ -127,7 +127,7 @@
         
         <tr>
           <td><p>7</p></td>
-          <td><p>RM04_소회의실</p></td>
+          <td><p>RM07_소회의실</p></td>
           <td class="tb-ellipsis">
             <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
           </td>
@@ -141,7 +141,7 @@
         
         <tr>
           <td><p>8</p></td>
-          <td><p>RM04_소회의실</p></td>
+          <td><p>RM08_소회의실</p></td>
           <td class="tb-ellipsis">
             <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
           </td>
@@ -155,7 +155,7 @@
         
         <tr>
           <td><p>9</p></td>
-          <td><p>RM04_소회의실</p></td>
+          <td><p>RM09_소회의실</p></td>
           <td class="tb-ellipsis">
             <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
           </td>
@@ -169,7 +169,7 @@
         
         <tr>
           <td><p>10</p></td>
-          <td><p>RM04_소회의실</p></td>
+          <td><p>RM10_소회의실</p></td>
           <td class="tb-ellipsis">
             <a href="./meeting_history_view.html">ㅇㅇ 관련 회의</a>
           </td>
@@ -180,14 +180,13 @@
           </td>
           <td><p>진행예정</p></td>
         </tr>
-        
       </tbody>
     </table>
   </div>
   <div class="table-foot">
     <div class="list_info">
       <p>
-        총 6개<br />
+        총 10개<br />
         page ( 1 / 1 )
       </p>
     </div>
@@ -206,7 +205,7 @@
         </button>
       </li>
     </ul>
-    <a href="./meeting_history_add.html" class="btn modal-trigger"> 예약 </a>
+    <a href="./meeting_history_add.html" class="btn"> 예약 </a>
   </div>
 </article>
 
@@ -301,6 +300,7 @@
     const option = document.createElement("option");
     option.setAttribute.value = number;
     option.innerText = number;
+    option.disabled = number === "10:00" ? true :false; // 예약 시 비활성화 테스트
     return option;
   };
 

@@ -12,6 +12,7 @@
     background-color: rgba(0, 0, 0, 0.3);
   
     &.active {
+      z-index: 999;
       display: block;
     }
   
@@ -62,3 +63,8 @@
     }
   }
   
+.modal{
+  .data-board-input p{
+    font-size: var(--txtSm);
+  }
+}

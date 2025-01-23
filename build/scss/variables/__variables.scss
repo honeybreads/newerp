@@ -36,3 +36,13 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: 499px) {
+  :root{
+    --conSize: 28px;
+  }
+
+  body {
+    font-size: 11px;
+  }
+}

@@ -17,6 +17,7 @@
 
     .btn {
       height: 32px;
+
       &:hover {
         color: var(--colDark);
       }
@@ -42,14 +43,16 @@
     margin-left: auto;
 
     p {
+      line-height: 0;
       gap: var(--spSm);
-      display: inline-flex;
       align-items: center;
+      display: inline-flex;
+
       span {
-        display: inline-block;
         width: 12px;
         height: 12px;
         border-radius: 4px;
+        display: inline-block;
       }
 
       &:nth-of-type(1) {
@@ -76,8 +79,8 @@
 
 .timeline-body {
   overflow: auto;
-  padding-bottom: var(--spLg);
   margin-top: var(--spLg);
+  padding-bottom: var(--spLg);
 }
 
 .timeline-grid {
@@ -140,28 +143,29 @@
     }
     &:has(.timeline-grid-item:not(.range)) {
       position: relative;
+
       &::before,
       &::after {
         content: "";
-        left: 0;
+        left: -150px;
         opacity: 0;
         z-index: 2;
-        width: 100%;
         height: 0.5px;
         position: absolute;
         display: inline-block;
+        width: calc(100% + 149px);
         background-color: var(--colMain);
       }
 
       &::before {
-        top: -0.5px;
+        top: 0;
       }
 
       &::after {
-        bottom: -0.5px;
+        bottom: 0;
       }
     }
-    
+
     &:has(.timeline-grid-item:not(.range):hover) {
       &::before,
       &::after {
@@ -171,7 +175,7 @@
   }
 
   &-item {
-    height: 36px;
+    height: 38px;
     display: flex;
     align-items: center;
     border-top: 1px solid var(--colBorder);
