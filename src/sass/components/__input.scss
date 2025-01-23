@@ -54,19 +54,27 @@
   position: relative;
   background: url(../images/calendar-solid.svg) right 10px top 50% no-repeat;
   background-size: 12px;
-
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
   &::-webkit-calendar-picker-indicator {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    opacity: 0;
     width: auto;
     height: auto;
     cursor: pointer;
     color: transparent;
     position: absolute;
     background: transparent;
-    opacity: 0;
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 }
 
